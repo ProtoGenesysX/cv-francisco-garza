@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francisco Garza Martinez — Senior Copywriter</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --surface-2: #1e293b;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --border: #1e293b;
+    --tag-bg: #1e293b;
+    --success: #4ade80;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .hero .tagline {
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .hero .summary {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .hero-meta {
+    text-align: right;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 2;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .hero-meta a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .hero-meta a:hover { color: var(--accent-light); }
+
+  .hero-meta .availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--success);
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  .hero-meta .availability::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ── Impact Banner ── */
+  .impact {
+    background: linear-gradient(135deg, #0c1529 0%, #111d36 100%);
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin: 48px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+
+  .impact-stat .number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .impact-stat .label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  /* ── Sections ── */
+  section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .section-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .section-header .line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Experience Cards ── */
+  .exp-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s;
+  }
+
+  .exp-card:hover { border-color: #3a3a3a; }
+
+  .exp-card.featured {
+    border-color: var(--accent);
+    border-width: 1px;
+    position: relative;
+  }
+
+  .exp-card.featured::before {
+    content: '★ KEY ROLE';
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background: var(--accent);
+    color: #0f0f0f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 2px 10px;
+    border-radius: 4px;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+
+  .exp-title {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .exp-dates {
+    font-size: 13px;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .exp-company {
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    padding: 0;
+  }
+
+  .exp-bullets li {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  .exp-bullets .highlight {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* ── Skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .skill-group h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+
+  .tag:hover {
+    border-color: var(--accent);
+    color: var(--text);
+  }
+
+  .tag.primary {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: #0c1a2e;
+  }
+
+  /* ── Education ── */
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .edu-item:last-child { border-bottom: none; }
+
+  .edu-degree {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .edu-school {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .edu-year {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* ── Languages ── */
+  .lang-row {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  .lang-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 24px;
+    text-align: center;
+    flex: 1;
+  }
+
+  .lang-name {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .lang-level {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+
+  .footer .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #0f0f0f;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-bottom: 24px;
+  }
+  .footer .download-btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-1px);
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; color: #111; }
+    .hero { padding: 20px 0; }
+    .hero h1 { font-size: 28px; }
+    .impact { background: #eff6ff; border-color: #bfdbfe; }
+    .impact-stat .number { color: #1d4ed8; }
+    .exp-card { background: #fafafa; border-color: #e0e0e0; }
+    .exp-card.featured { border-color: #3b82f6; }
+    .tag { background: #f0f0f0; border-color: #ddd; }
+    .tag.primary { background: #eff6ff; border-color: #3b82f6; color: #1d4ed8; }
+    .footer .download-btn { display: none; }
+    section { padding: 24px 0; }
+    .container { max-width: 100%; }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 640px) {
+    .hero-inner { flex-direction: column; gap: 24px; }
+    .hero-meta { text-align: left; }
+    .hero h1 { font-size: 32px; }
+    .impact { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .lang-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Francisco Garza<br>Martinez</h1>
+        <div class="tagline">Senior Copywriter · Email Marketing · Content Strategy</div>
+        <p class="summary">Strategic copywriter with an economics backbone. I turn data into stories that sell. At Mott & Bow, I nearly doubled weekly email revenue from $40K to $100K. I write across formats: campaigns, SEO, UX, brand voice, loyalty programs. Bilingual, multicontinental, fueled by curiosity and good coffee.</p>
+      </div>
+      <div class="hero-meta">
+        Chiang Mai, Thailand<br>
+        <a href="mailto:franciscopywriting@gmail.com">franciscopywriting@gmail.com</a><br>
+        <a href="https://linkedin.com/in/fegmx">linkedin.com/in/fegmx</a><br>
+        🇵🇹 🇲🇽 EU Work Authorization<br>
+        <div class="availability">Available from April 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Impact Numbers -->
+  <div class="impact">
+    <div class="impact-stat">
+      <div class="number">75–100%</div>
+      <div class="label">Revenue Growth</div>
+    </div>
+    <div class="impact-stat">
+      <div class="number">90+</div>
+      <div class="label">Pages of SEO Content</div>
+    </div>
+    <div class="impact-stat">
+      <div class="number">3</div>
+      <div class="label">Continents Worked</div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <section>
+    <div class="section-header">
+      <h2>Experience</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="exp-card featured">
+      <div class="exp-header">
+        <div class="exp-title">Copywriter</div>
+        <div class="exp-dates">May 2023 — Mar 2026</div>
+      </div>
+      <div class="exp-company">Mott & Bow · New York (Remote)</div>
+      <ul class="exp-bullets">
+        <li><span class="highlight">Grew weekly email revenue from $40–50K to $70–100K USD</span> through strategic campaign copy, automated flows, and A/B optimization.</li>
+        <li>Defined and owned the brand voice across all email touchpoints, crafting a premium tone that reinforced customer loyalty.</li>
+        <li>Launched the loyalty program end-to-end: landing page, full email flow (welcome, renewal, cancellation, payment failure), and all UX copy.</li>
+        <li>Wrote and optimized 40 collection pages and 50+ blog entries with SEO, GEO, and cross-selling strategies. Restructured content for LLM indexing.</li>
+        <li>Ran continuous A/B testing on subject lines, copy angles, and campaign structure to refine strategy quarter over quarter.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Copywriter</div>
+        <div class="exp-dates">Oct 2021 — Nov 2022</div>
+      </div>
+      <div class="exp-company">Drive Hackers · Monterrey, MX</div>
+      <ul class="exp-bullets">
+        <li>Created content calendars and campaigns for SMB clients: blog posts, emails, social ads, ebooks, and scripts.</li>
+        <li>Collaborated cross-functionally on new content initiatives and lead generation strategies.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Project Manager, Strategic Communications</div>
+        <div class="exp-dates">Mar 2021 — Aug 2022</div>
+      </div>
+      <div class="exp-company">Xignux · Monterrey, MX</div>
+      <ul class="exp-bullets">
+        <li>Designed a Strategic Communication Plan spanning 5 subsidiary companies.</li>
+        <li>Led internal IT communications, translating technical content into clear, accessible copy.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Creative Writing Teacher</div>
+        <div class="exp-dates">Feb 2021 — Jan 2022</div>
+      </div>
+      <div class="exp-company">Universidad Autónoma de Nuevo León · Monterrey, MX</div>
+      <ul class="exp-bullets">
+        <li>Designed and delivered a 7-session creative writing curriculum from scratch.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Accelerated Development Professional</div>
+        <div class="exp-dates">Jul 2018 — Feb 2020</div>
+      </div>
+      <div class="exp-company">Metalsa / Grupo Proeza · Monterrey, MX</div>
+      <ul class="exp-bullets">
+        <li>Rotational program: 4 projects across finance, corporate development, and strategic planning.</li>
+        <li>Identified 2 new market opportunities subsequently taken into development by the company.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <div class="section-header">
+      <h2>Skills</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Email Marketing</h3>
+        <div class="tags">
+          <span class="tag primary">Campaign Copywriting</span>
+          <span class="tag primary">Automated Flows</span>
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Revenue Optimization</span>
+          <span class="tag">Klaviyo</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Content Strategy</h3>
+        <div class="tags">
+          <span class="tag primary">SEO Copywriting</span>
+          <span class="tag primary">GEO Content</span>
+          <span class="tag">LLM/AI Search Optimization</span>
+          <span class="tag">Blog Strategy</span>
+          <span class="tag">Content Calendars</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>UX & Brand</h3>
+        <div class="tags">
+          <span class="tag primary">Brand Voice</span>
+          <span class="tag">UX Microcopy</span>
+          <span class="tag">Landing Pages</span>
+          <span class="tag">Loyalty Programs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Technical</h3>
+        <div class="tags">
+          <span class="tag">AI-Assisted Writing</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">PowerBI</span>
+          <span class="tag">ChatGPT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Languages -->
+  <section>
+    <div class="section-header">
+      <h2>Education</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="edu-item">
+      <div>
+        <div class="edu-degree">BA in Economics</div>
+        <div class="edu-school">Universidad de Monterrey · Exchange: Eberhard Karls Universität Tübingen, Germany</div>
+      </div>
+      <div class="edu-year">2012–2018</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-degree">Creative Writing</div>
+        <div class="edu-school">Wesleyan University (Online)</div>
+      </div>
+      <div class="edu-year">2020</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <h2>Languages</h2>
+      <div class="line"></div>
+    </div>
+    <div class="lang-row">
+      <div class="lang-item">
+        <div class="lang-name">🇪🇸 Spanish</div>
+        <div class="lang-level">Native</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">🇬🇧 English</div>
+        <div class="lang-level">Bilingual</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">🇵🇹 Portuguese</div>
+        <div class="lang-level">Intermediate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="francisco-garza-martinez-cv.pdf" class="download-btn">↓ Download PDF</a>
+    <p>© 2026 Francisco Garza Martinez · Built with purpose</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
