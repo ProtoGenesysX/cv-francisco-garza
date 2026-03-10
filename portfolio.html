@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Francisco Garza Martinez</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --surface-2: #1e293b;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --border: #1e293b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  .header {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .header a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .header a:hover { color: var(--accent-light); }
+
+  .intro {
+    padding: 32px 0;
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 600px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 0 60px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .card .icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .card .desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .card .count {
+    display: inline-block;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Portfolio</h1>
+    <a href="index.html">← Back to CV</a>
+  </div>
+
+  <p class="intro">A selection of my work across email marketing, content strategy, landing pages, and creative writing. Click any category to browse samples.</p>
+
+  <div class="grid">
+
+    <a href="portfolio/emails.html" class="card">
+      <div class="icon">✉️</div>
+      <h2>Emails</h2>
+      <div class="desc">Campaign emails, automated flows, product launches, and seasonal campaigns for Mott & Bow.</div>
+      <span class="count">4 samples</span>
+    </a>
+
+    <a href="portfolio/funnels.html" class="card">
+      <div class="icon">🎯</div>
+      <h2>Funnels</h2>
+      <div class="desc">Landing pages and conversion funnels for product campaigns.</div>
+      <span class="count">2 samples</span>
+    </a>
+
+    <a href="portfolio/collection-pages.html" class="card">
+      <div class="icon">🛍️</div>
+      <h2>Collection Pages</h2>
+      <div class="desc">E-commerce collection pages with SEO, GEO, and cross-selling strategy.</div>
+    </a>
+
+    <a href="portfolio/product-descriptions.html" class="card">
+      <div class="icon">📝</div>
+      <h2>Product Descriptions</h2>
+      <div class="desc">Product description pages for fashion e-commerce.</div>
+    </a>
+
+    <a href="portfolio/landing-pages.html" class="card">
+      <div class="icon">🚀</div>
+      <h2>Landing Pages</h2>
+      <div class="desc">Conversion-focused landing pages for campaigns and product launches.</div>
+    </a>
+
+    <a href="portfolio/blog-entries.html" class="card">
+      <div class="icon">📰</div>
+      <h2>Blog Entries</h2>
+      <div class="desc">SEO and GEO-optimized blog content, including LLM-indexed articles.</div>
+    </a>
+
+    <a href="portfolio/case-studies.html" class="card">
+      <div class="icon">📊</div>
+      <h2>Case Studies</h2>
+      <div class="desc">In-depth case studies showcasing results and strategy.</div>
+      <span class="count">1 sample</span>
+    </a>
+
+    <a href="portfolio/video-scripts.html" class="card">
+      <div class="icon">🎬</div>
+      <h2>Video Scripts</h2>
+      <div class="desc">Scripts for brand videos and product content.</div>
+    </a>
+
+    <a href="portfolio/advertorials.html" class="card">
+      <div class="icon">📣</div>
+      <h2>Advertorials</h2>
+      <div class="desc">Sponsored content and advertorial copy.</div>
+    </a>
+
+    <a href="portfolio/translations.html" class="card">
+      <div class="icon">🌐</div>
+      <h2>Translations</h2>
+      <div class="desc">English ↔ Spanish content adaptation and translation.</div>
+    </a>
+
+  </div>
+
+</div>
+</body>
+</html>

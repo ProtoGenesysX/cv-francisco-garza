@@ -96,6 +96,35 @@
     font-weight: 500;
     margin-top: 8px;
   }
+
+  .hero-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .hero-btn.primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .hero-btn.primary:hover { background: var(--accent-light); }
+  .hero-btn.secondary {
+    background: var(--surface-2);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+  .hero-btn.secondary:hover { border-color: var(--accent); color: var(--text); }
   .hero-meta .availability::before {
     content: '';
     width: 8px;
@@ -417,6 +446,10 @@
         <a href="https://linkedin.com/in/fegmx">linkedin.com/in/fegmx</a><br>
         <img src="https://flagcdn.com/20x15/pt.png" alt="PT" style="vertical-align: middle;"> <img src="https://flagcdn.com/20x15/mx.png" alt="MX" style="vertical-align: middle;"> EU Work Authorization<br>
         <div class="availability">Available from April 2026</div>
+        <div class="hero-buttons">
+          <a href="portfolio.html" class="hero-btn primary">📂 Portfolio</a>
+          <a href="francisco-garza-martinez-cv.pdf" class="hero-btn secondary" download>↓ PDF</a>
+        </div>
       </div>
     </div>
   </header>
@@ -602,9 +635,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <a href="https://drive.google.com/drive/u/0/folders/1PQ3Xg-5Po6g9_-3cQxyHDPlJM4FnDg8E" class="download-btn" style="background: var(--surface-2); color: var(--text); border: 1px solid var(--border); margin-right: 12px;" target="_blank">📂 Portfolio</a>
-    <a href="francisco-garza-martinez-cv.pdf" class="download-btn" download>↓ Download PDF</a>
-    <p style="margin-top: 24px;">© 2026 Francisco Garza Martinez · Built with purpose</p>
+    <p>© 2026 Francisco Garza Martinez · Built with purpose</p>
   </footer>
 
 </div>
